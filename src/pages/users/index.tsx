@@ -1,14 +1,20 @@
 import { Table, Tag, Space } from 'antd';
 import  React  from 'react';
 import { connect } from 'umi';
+import susers from '@/pages/users/model'
 
-const index = ({users}) => {
+const index = ({users}:any) => {
+
+const icon = () => {
+  console.log(susers.reducers.save({},{}));
+}
+
   const columns = [
     {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: text => <a>{text}</a>,
+      render: (text: any) => <a>{text}</a>,
     },
     {
       title: 'Age',
@@ -24,7 +30,7 @@ const index = ({users}) => {
       title: 'Tags',
       key: 'tags',
       dataIndex: 'tags',
-      render: tags => (
+      render: (tags: any[]) => (
         <>
           {tags.map(tag => {
             let color = tag.length > 5 ? 'geekblue' : 'green';
@@ -43,7 +49,7 @@ const index = ({users}) => {
     {
       title: 'Action',
       key: 'action',
-      render: (text, record) => (
+      render: (text: any, record: { name: string | number | boolean | {} | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray | React.ReactPortal | null | undefined; }) => (
         <Space size="middle">
           <a>Invite {record.name}</a>
           <a>Delete</a>
@@ -75,10 +81,13 @@ const index = ({users}) => {
       tags: ['cool', 'teacher'],
     },
   ];
-  return <div className='list-table'><Table columns={columns} dataSource={users} /></div> ;
+  return <>
+      <div className='list-table'><Table columns={columns} dataSource={users} /></div> 
+      <span onClick={icon}>2121312</span>
+  </> ;
 };
 
-const mapStateToProps = ({users}) => {
+const mapStateToProps = ({users}:any) => {
   return {users}
 }
 

@@ -1,0 +1,64 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\nvm;D:\Program Files\nodejs;C:\Program Files\Java\jdk1.8.0_281\bin;D:\Flutter\flutter\bin;C:\Users\13050\node_modules\yarn\bin;D:\Golang\bin;D:\Flutter\gcc\mingw64\bin;C:\Users\13050\AppData\Local\Microsoft\WindowsApps;D:\nvm;D:\Program Files\nodejs;;D:\devecoStudio\DevEco Studio 2.1.0.501\bin;;C:\Users\13050\go\bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: unexpected end of file
+      at Zlib.zlibOnError [as onerror] (zlib.js:181:17)
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "start": "umi dev",
+      "build": "umi build",
+      "postinstall": "umi generate tmp",
+      "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+      "test": "umi-test",
+      "test:coverage": "umi-test --coverage"
+    },
+    "gitHooks": {
+      "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+      "*.{js,jsx,less,md,json}": [
+        "prettier --write"
+      ],
+      "*.ts?(x)": [
+        "prettier --parser=typescript --write"
+      ]
+    },
+    "dependencies": {
+      "@ant-design/pro-layout": "^6.5.0",
+      "react": "17.x",
+      "react-dom": "17.x",
+      "umi": "^3.5.15"
+    },
+    "devDependencies": {
+      "@types/react": "^17.0.0",
+      "@types/react-dom": "^17.0.0",
+      "@umijs/preset-react": "1.x",
+      "@umijs/test": "^3.5.15",
+      "lint-staged": "^10.0.7",
+      "prettier": "^2.2.0",
+      "typescript": "^4.1.2",
+      "yorkie": "^2.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
